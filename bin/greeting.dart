@@ -1,6 +1,8 @@
 void main() {
   // Código principal
   saudacoes('Nathan', visitante: 'Leandro', corpo: funcao);
+  String problema = gravidade(5) ?? 'Não informado';
+  print('A gravidade do seu problema é: $problema');
 }
 
 void funcao(int i) {
@@ -14,6 +16,7 @@ void saudacoes( // Função
   bool mostrarHora = true,
   String? visitante = 'Não Informado', // Variável Nullable
   required Function(int) corpo,
+  // String problema = gravidade(5) ?? 'Não informado', /// BUG
 }) {
 
   corpo(15);
@@ -24,6 +27,15 @@ void saudacoes( // Função
     }
   if (mostrarHora) {
    print('O horário é: ${hora()}');
+  }
+}
+
+String? gravidade(int x) {
+  if(x > 8) {
+    return 'Grave';
+  }
+  else {
+    return 'Leve';
   }
 }
 
