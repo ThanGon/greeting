@@ -14,6 +14,7 @@ void saudacoes( // Função
   bool mostrarHora = true,
   String? visitante = 'Não Informado', // Variável Nullable
   required Function(int) corpo,
+  // String problema = gravidade(5) ?? 'Não informado',
 }) {
 
   corpo(15);
@@ -24,6 +25,15 @@ void saudacoes( // Função
     }
   if (mostrarHora) {
    print('O horário é: ${hora()}');
+  }
+}
+
+String? gravidade(int x) {
+  if(x > 8) {
+    return 'Grave';
+  }
+  else {
+    return 'Leve';
   }
 }
 
