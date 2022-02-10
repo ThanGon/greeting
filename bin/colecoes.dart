@@ -33,7 +33,18 @@ void main() {
   print(inteiros);
 
   listagem();
+
+  List<int> multiplicar =  List.generate(10, (i) => i * 10); // Gerar lista via multiplicação dos elementos
+  print(multiplicar);
+
+  print(multiplicar.any((i) => i * 5 == 50));
+
+  print(multiplicar.where((i) => i * 5 == 50));
 }
+
+// int indice(int q) {
+  // return q * 5;
+// }
 
 String nome() {
   String name = 'Nathan';
