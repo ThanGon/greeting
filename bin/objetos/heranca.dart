@@ -1,17 +1,21 @@
 void main() {
-  /*Cachorro cachorro1 = Cachorro();
-  //cachorro1.idade = 10;
+  Cachorro cachorro1 = Cachorro();
+  cachorro1.idade = 10;
   print(cachorro1.identificar());
-  cachorro1.latir();*/
+  cachorro1.latir();
 
   Gato baguera = Gato();
   baguera.nome = 'Baguera';
-  print('Seu gato se chama ${baguera.nome}');
+  // print('Seu gato se chama ${baguera.nome}');
   baguera.arranhar();
-  print('${baguera.nome} sentou no sofá');
+
+  List<Animal> animais = [];
+  animais.add(cachorro1);
+  animais.add(baguera);
+
 }
 
-class Animal {
+class Animal { // Superclass onde as outras class vão herdar
   // Animal({required this.nome, required this.idade});
   String nome = 'Não identificado';
   int? idade;
